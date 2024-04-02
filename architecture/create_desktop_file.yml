@@ -1,0 +1,10 @@
+# create_desktop_file.yml
+
+---
+- hosts: win1.example.com
+  tasks:
+
+  - name: A single 'ansible.txt' text file is created
+    win_copy:
+      content: 'This is the win1.example.com server managed by Ansible'
+      dest: C:\Users\devops\desktop\ansible.txt

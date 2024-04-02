@@ -1,2 +1,1 @@
-Microsoft Windows Automation with Red Hat Ansible
-Notes taken from the guided exercises and labs
+This is a sample README for the Microsoft Windows Automation with Red Hat Ansible.
