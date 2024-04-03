@@ -1,0 +1,19 @@
+---
+- name: Create a local user
+  hosts: all
+
+  tasks:
+    - name: Joe Jee user is created
+      win_user:
+        name: Joe Jee
+        password: P@ssword123
+        state: present
+        groups:
+          - Users
+
+    - name: Joe Jee added to the Print operators group
+      win_group_membership:
+        name: Print operators
+        members:
+          - Joe Jee
+        state: present

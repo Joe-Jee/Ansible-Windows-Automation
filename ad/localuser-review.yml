@@ -1,0 +1,25 @@
+---
+- name: Create a local user
+  # Update the playbook to target all hosts
+  hosts: all
+
+  tasks:
+      # Create two users
+    - name: Two local users are created
+      win_user:
+        name: "{{ item }}"
+        password: RedHat123@!
+        state: present
+        groups:
+          - Users
+      loop:
+        - Review User1
+        - Review User2
+
+      # Add the Review User1 to the Print operators group
+    - name: The Review User1 is added to the Print Operators group
+      win_group_membership:
+        name: Print operators
+        members:
+          - Review User1
+        state: present
