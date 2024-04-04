@@ -1,0 +1,9 @@
+- src: https://github.com/arillso/ansible.chocolatey.git #replace with the URL link to the role's location
+  version: 1.3.2 #replace with the exact version of the role that you want to use
+  name: ansible-chocolatey-role #replace with a name that you want to give this role
+
+- src: https://gitlab.example.com/student/ansible-7zip.git
+  scm: git
+  version: f6a3e39f #Insert the commit version number here
+  name: ansible-7zip
+

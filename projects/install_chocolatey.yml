@@ -1,0 +1,13 @@
+---
+- name: Installing chocolatey using a role with custom settings
+  hosts: all
+  tasks:
+    - name: Install chocolatey with custom settings
+      vars:
+        chocolatey_config: #replace with the proper role variable to customize the configuration
+          - commandExecutionTimeoutSeconds: 2300
+        chocolatey_feature: #replace with the proper role variable to change some feature settings
+          - virusCheck: true
+          - usePackageRepositoryOptimizations: true
+      import_role:
+        name: ansible-chocolatey-role #replace with the name you have given the role in the requirements.yml file
